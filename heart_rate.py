@@ -1,12 +1,12 @@
 # Import libraries
-#import bluetooth
+# import bluetooth
 import serial
 
 # Define constants
-PORT = 1 # Bluetooth port number
-BAUDRATE = 9600 # Serial baud rate
-TIMEOUT = 10 # Serial timeout (in seconds)
-DEVICE_NAME = "Heart Rate Monitor" # Bluetooth device name
+PORT = 1  # Bluetooth port number
+BAUDRATE = 9600  # Serial baud rate
+TIMEOUT = 10  # Serial timeout (in seconds)
+DEVICE_NAME = "Heart Rate Monitor"  # Bluetooth device name
 
 try:
     # Find the Bluetooth address of the device
@@ -54,31 +54,6 @@ try:
     # Close the serial port
     port.close()
 except:
-    import random
-
-    while True:
-        user_input = input("Press 'q' to quit or any other key to generate a random heart rate: ")
-        
-        if user_input == 'q':
-            break
-
-        heart_rate = random.uniform(60.0, 65.0)
-        print("Heart Rate:", heart_rate)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print("Error")
+    port.close()
+    exit()
